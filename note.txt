@@ -1,0 +1,6 @@
+Bước 1: Cài đặt nodejs
+Bước 2: Sử dụng npm cài đặt vitejs và tạo project
+    npm create vite@latest we18102 -- --template vanilla
+Bước 3: Truy cập vào thư mục we18102 vừa tạo
+    cd we18102 
+    code .
