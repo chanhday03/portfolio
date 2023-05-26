@@ -110,60 +110,40 @@ const AboutPage = () => {
           <div class="tl-icon">
               <i class="fas fa-briefcase"></i>
           </div>
-          <p class="tl-duration">2010 - present</p>
-          <h5>Web Developer<span> - Vircrosoft</span></h5>
+          <p class="tl-duration">2023 - present</p>
+          <h5>Student <span> - at FPT Polytechnic</span></h5>
           <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
+          "FPT Polytechnic Practice College was born with the mission of providing good training services on the following criteria: matching the learning capacity of students; meeting the great needs of enterprises; and providing training services. creating standards based on recognized standards. With a rate of 97.7% of students having jobs right after graduation."
           </p>
       </div>
       <div class="timeline-item">
           <div class="tl-icon">
               <i class="fas fa-briefcase"></i>
           </div>
-          <p class="tl-duration">2008 - 2011</p>
-          <h5>Software Engineer<span> - Boogle, Inc.</span></h5>
+          <p class="tl-duration"> 2011</p>
+          <h5>Begin study at FPT<span> - FPT Polytechnic.</span></h5>
           <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
+          FPT Polytechnic College is a public college in Vietnam, established and managed by FPT Corporation.
           </p>
       </div>
       <div class="timeline-item">
           <div class="tl-icon">
               <i class="fas fa-briefcase"></i>
           </div>
-          <p class="tl-duration">2016 - 2017</p>
-          <h5>C++ Programmer<span> - Slime Tech</span></h5>
+          <p class="tl-duration">2022</p>
+          <h5>Stydy "Tieng Anh giao tiep "<span> - Lapo English</span></h5>
           <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
+          With learning English and having good communication skills in this language, you will have the opportunity to make new friends, especially young people from different countries, in addition, learning English is also an opportunity. good opportunity for you to learn more about the culture of western countries.
           </p>
       </div>
       <div class="timeline-item">
           <div class="tl-icon">
               <i class="fas fa-briefcase"></i>
           </div>
-          <p class="tl-duration">2009 - 2013</p>
-          <h5>Business Degree<span> - Sussex University</span></h5>
+          <p class="tl-duration">2023</p>
+          <h5>Study " Hoc Toiec 1 Lan La Dat "<span> - Zenlish Toeic</span></h5>
           <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-          </p>
-      </div>
-      <div class="timeline-item">
-          <div class="tl-icon">
-              <i class="fas fa-briefcase"></i>
-          </div>
-          <p class="tl-duration">2013 - 2016</p>
-          <h5>Computer Science Degree<span> - Brookes University</span></h5>
-          <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-          </p>
-      </div>
-      <div class="timeline-item">
-          <div class="tl-icon">
-              <i class="fas fa-briefcase"></i>
-          </div>
-          <p class="tl-duration">2017 - present</p>
-          <h5>3d Animation<span> - Brighton University</span></h5>
-          <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
+          TOEIC is a test for people who use English as a foreign language and want to use English in an international communication and working environment.
           </p>
       </div>
   </div>

@@ -11,12 +11,11 @@ const Header = () => {
             <div class="right-header">
                 <h1 class="name">
                 Hi, I'm <span>Le Thi Trang</span>
-                A Frontend Web Developer.
+                A Business Analyst (BA)
                 </h1>
                 <p>
-                    I'm a Web Developer, I love to create beautiful and functional websites.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, libero?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque blanditiis sed aut!
+                    I'm a Business Analyst (BA), I love to create beautiful and functional websites.
+                    The main responsibility of the BA position is to analyze and evaluate the company's entire business process to identify problems that need improvement, thereby proposing specific solutions. BA can work directly with customers to receive comments, then transfer information to the internal team for processing. In addition, BA also undertakes the role of writing and managing technical documents.
                 </p>
                 <div class="btn-con">
                     <a href="" class="main-btn">
