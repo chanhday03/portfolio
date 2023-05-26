@@ -5,13 +5,13 @@ const Header = () => {
             <div class="left-header">
                 <div class="h-shape"></div>
                 <div class="image">
-                    <img src="img/hero.png" alt="">
+                    <img src="img/hero.jpg" alt="">
                 </div>
             </div>
             <div class="right-header">
                 <h1 class="name">
-                    Hi, I'm <span>Solano Milan Diaz.</span>
-                    A Web Developer.
+                Hi, I'm <span>Le Thi Trang</span>
+                A Frontend Web Developer.
                 </h1>
                 <p>
                     I'm a Web Developer, I love to create beautiful and functional websites.

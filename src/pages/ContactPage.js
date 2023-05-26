@@ -67,9 +67,6 @@ const ContactPage = () => {
                         <a href="https://www.facebook.com/chanhday03" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" target="_blank">
-                            <i class="fab fa-ins"></i>
-                        </a>
                         <a href="https://github.com/chanhday03" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
