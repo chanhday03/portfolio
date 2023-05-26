@@ -30,25 +30,25 @@ const AboutPage = () => {
       <div class="right-about">
           <div class="about-item">
               <div class="abt-text">
-                  <p class="large-text">650+</p>
+                  <p class="large-text">10+</p>
                   <p class="small-text">Projects <br /> Completed</p>
               </div>
           </div>
           <div class="about-item">
               <div class="abt-text">
-                  <p class="large-text">10+</p>
+                  <p class="large-text">1+</p>
                   <p class="small-text">Years of <br /> experience</p>
               </div>
           </div>
           <div class="about-item">
               <div class="abt-text">
-                  <p class="large-text">300+</p>
+                  <p class="large-text">5+</p>
                   <p class="small-text">Happy <br /> Clients</p>
               </div>
           </div>
           <div class="about-item">
               <div class="abt-text">
-                  <p class="large-text">400+</p>
+                  <p class="large-text">10+</p>
                   <p class="small-text">Customer <br /> reviews</p>
               </div>
           </div>
@@ -99,15 +99,6 @@ const AboutPage = () => {
                   <p class="prog-text">87%</p>
                   <div class="progress">
                       <span class="node"></span>
-                  </div>
-              </div>
-          </div>
-          <div class="progress-bar">
-              <p class="prog-title">Python</p>
-              <div class="progress-con">
-                  <p class="prog-text">70%</p>
-                  <div class="progress">
-                      <span class="python"></span>
                   </div>
               </div>
           </div>

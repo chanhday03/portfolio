@@ -22,7 +22,7 @@ const ContactPage = () => {
                             <span>Location</span>
                         </div>
                         <p>
-                            : London, united Kingdom
+                            : 7 Nguyen Xa , Minh Khai , Bac Tu Niem , Ha Noi
                         </p>
                     </div>
                     <div class="contact-item">
@@ -31,7 +31,7 @@ const ContactPage = () => {
                             <span>Email</span>
                         </div>
                         <p>
-                            <span>: maclinzuniversal@gmail.com</span>
+                            <span>: lethitrang010603@gmail.com</span>
                         </p>
                     </div>
                     <div class="contact-item">
@@ -40,7 +40,7 @@ const ContactPage = () => {
                             <span>Education</span>
                         </div>
                         <p>
-                            <span>: Sussex University, East Sussex</span>
+                            <span>: Cao Dang FPT Polytechnic</span>
                         </p>
                     </div>
                     <div class="contact-item">
@@ -49,7 +49,7 @@ const ContactPage = () => {
                             <span>Mobile Number</span>
                         </div>
                         <p>
-                            <span>: 07522670617</span>
+                            <span>: +84369913630</span>
                         </p>
                     </div>
                     <div class="contact-item">
@@ -58,22 +58,22 @@ const ContactPage = () => {
                             <span>Languages</span>
                         </div>
                         <p>
-                            <span>: Afrikaans, English, Spanish</span>
+                            <span>: English</span>
                         </p>
                     </div>
                 </div>
                 <div class="contact-icons">
                     <div class="contact-icon">
-                        <a href="www.facebook.com" target="_blank">
+                        <a href="https://www.facebook.com/chanhday03" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                         <a href="#" target="_blank">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-ins"></i>
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="https://github.com/chanhday03" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="https://www.youtube.com/channel/UCqtsjnugG1y4NLQTSXItcIw" target="_blank">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
