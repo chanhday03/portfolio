@@ -1,5 +1,4 @@
 import Constrols from "../components/Controls";
-import Header from "../components/Header";
 
 const AboutPage = () => {
   return /*html */ `

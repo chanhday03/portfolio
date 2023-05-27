@@ -1,6 +1,4 @@
-import Banner from "../components/Banner";
 import Constrols from "../components/Controls";
-import Header from "../components/Header";
 import { posts } from "../dataFake";
 
 const HomePage = () => {

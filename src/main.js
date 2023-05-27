@@ -28,8 +28,9 @@ router.on("/blogs", function () {
 router.on("/contact", function () {
   render(ContactPage);
 });
-// Trong thư viện Navigo đã xử lý hết phần router rồi. Khi mà đường dẫn khớp với cái router mình viết ở dưới
-//Thì nó sẽ chạy call back. Và sẽ nhận được dữ liệu chứa í
+// Trong thư viện Navigo đã xử lý hết phần router rồi.
+// Khi mà đường dẫn khớp với cái router mình viết ở dưới
+//Thì nó sẽ chạy call back. Và sẽ nhận được dữ liệu chứa id
 router.on("/post/:id", function ({ data }) {
   render(() => PostDetailPage(data));
 });
