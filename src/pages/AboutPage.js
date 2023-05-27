@@ -1,6 +1,7 @@
 import Constrols from "../components/Controls";
+import ThemeControls from "../components/ThemeControls";
 
-const AboutPage = () => {
+const AboutPage = (pathName) => {
   return /*html */ `
   <main> 
   <section class="container about active" id="about">
@@ -148,7 +149,8 @@ const AboutPage = () => {
   </div>
 </section>
 </main>
-${Constrols()}
+  ${Constrols(pathName)}
+  ${ThemeControls()}
     `;
 };
 export default AboutPage;

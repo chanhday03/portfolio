@@ -1,6 +1,7 @@
 import Constrols from "../components/Controls";
+import ThemeControls from "../components/ThemeControls";
 
-const PortfolioPage = () => {
+const PortfolioPage = (pathName) => {
   return /*html */ `
   <main> 
     <section class="container active" id="portfolio">
@@ -147,7 +148,8 @@ const PortfolioPage = () => {
     </div>
 </section>
 </main>
-${Constrols()}
+  ${Constrols(pathName)}
+  ${ThemeControls()}
     `;
 };
 
