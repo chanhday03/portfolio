@@ -20,46 +20,46 @@ const ContactPage = (pathName) => {
                     <div class="contact-item">
                         <div class="icon">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Location</span>
+                            <span>Location: </span>
                         </div>
                         <p>
-                            : 7 Nguyen Xa , Minh Khai , Bac Tu Niem , Ha Noi
+                            Minh Khai , Bac Tu Niem , Ha Noi
                         </p>
                     </div>
                     <div class="contact-item">
                         <div class="icon">
                             <i class="fas fa-envelope"></i>
-                            <span>Email</span>
+                            <span>Email: </span>
                         </div>
                         <p>
-                            <span>: lethitrang010603@gmail.com</span>
+                            <span>lethitrang010603@gmail.com</span>
                         </p>
                     </div>
                     <div class="contact-item">
                         <div class="icon">
                             <i class="fas fa-user-graduate"></i>
-                            <span>Education</span>
+                            <span>Education: </span>
                         </div>
                         <p>
-                            <span>: Cao Dang FPT Polytechnic</span>
+                            <span>Cao Dang FPT Polytechnic</span>
                         </p>
                     </div>
                     <div class="contact-item">
                         <div class="icon">
                             <i class="fas fa-user-graduate"></i>
-                            <span>Mobile Number</span>
+                            <span>Mobile Number: </span>
                         </div>
                         <p>
-                            <span>: +84369913630</span>
+                            <span>+84369913630</span>
                         </p>
                     </div>
                     <div class="contact-item">
                         <div class="icon">
                             <i class="fas fa-globe-africa"></i>
-                            <span>Languages</span>
+                            <span>Languages:</span>
                         </div>
                         <p>
-                            <span>: English</span>
+                            <span>English</span>
                         </p>
                     </div>
                 </div>
