@@ -1,6 +1,3 @@
-import Constrols from "../components/Controls";
-import ThemeControls from "../components/ThemeControls";
-
 const BlogPage = (pathName) => {
   return /*html */ `
   <main> 
@@ -86,8 +83,7 @@ const BlogPage = (pathName) => {
     </div>
 </section>
 </main>
-  ${Constrols(pathName)}
-  ${ThemeControls()}
+  
     `;
 };
 export default BlogPage;

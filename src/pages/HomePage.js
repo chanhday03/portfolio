@@ -1,8 +1,3 @@
-import Constrols from "../components/Controls";
-import ThemeControls from "../components/ThemeControls";
-import { posts } from "../dataFake";
-import { useEffect } from "../utilities";
-
 const HomePage = (pathName) => {
   return /*html */ `
   <header class="container header active" id="home">
@@ -31,8 +26,6 @@ const HomePage = (pathName) => {
       </div>
   </div>
 </header>
-    ${Constrols(pathName)}
-  ${ThemeControls()}
   
  `;
 };

@@ -1,6 +1,3 @@
-import Constrols from "../components/Controls";
-import ThemeControls from "../components/ThemeControls";
-
 const ContactPage = (pathName) => {
   return /*html */ `
   <main> 
@@ -101,8 +98,7 @@ const ContactPage = (pathName) => {
     </div>
 </section>
 </main>
-  ${Constrols(pathName)}
-  ${ThemeControls()}
+  
     `;
 };
 export default ContactPage;

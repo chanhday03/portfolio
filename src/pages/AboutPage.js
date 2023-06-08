@@ -1,6 +1,3 @@
-import Constrols from "../components/Controls";
-import ThemeControls from "../components/ThemeControls";
-
 const AboutPage = (pathName) => {
   return /*html */ `
   <main> 
@@ -149,8 +146,7 @@ const AboutPage = (pathName) => {
   </div>
 </section>
 </main>
-  ${Constrols(pathName)}
-  ${ThemeControls()}
+  
     `;
 };
 export default AboutPage;

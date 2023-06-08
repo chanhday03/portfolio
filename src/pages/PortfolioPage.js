@@ -1,6 +1,3 @@
-import Constrols from "../components/Controls";
-import ThemeControls from "../components/ThemeControls";
-
 const PortfolioPage = (pathName) => {
   return /*html */ `
   <main> 
@@ -148,8 +145,7 @@ const PortfolioPage = (pathName) => {
     </div>
 </section>
 </main>
-  ${Constrols(pathName)}
-  ${ThemeControls()}
+  
     `;
 };
 

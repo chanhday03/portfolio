@@ -1,4 +1,4 @@
-import { useEffect } from "../utilities";
+import { useEffect } from "../lib";
 
 const ThemeControls = () => {
   useEffect(() => {
