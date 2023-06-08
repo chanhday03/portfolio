@@ -7,13 +7,14 @@ import PortfolioPage from "./pages/PortfolioPage";
 import PostDetailPage from "./pages/PostDetailPage";
 import { render, router } from "./lib";
 import WebsiteLayout from "./layouts/WebsiteLayout";
-import AddProject from "./admin/Projects/AddProject";
-import EditProject from "./admin/Projects/EditProject";
-// import ListProject from "./admin/Projects/ListProject";
 
 const app = document.querySelector("#app");
 
-// Router
+// Trong thư viện Navigo đã xử lý hết phần router rồi.
+// Khi mà đường dẫn khớp với cái router mình viết ở dưới
+//Thì nó sẽ chạy call back. Và sẽ nhận được dữ liệu chứa id qua tham số của callback đó
+
+//======================= Website  Router =======================//
 router.on("/", function () {
   render(() => WebsiteLayout(HomePage, "home"), app);
 });
@@ -30,14 +31,6 @@ router.on("/contact", function () {
   render(() => WebsiteLayout(ContactPage, "contact"), app);
 });
 
-// Trong thư viện Navigo đã xử lý hết phần router rồi.
-// Khi mà đường dẫn khớp với cái router mình viết ở dưới
-//Thì nó sẽ chạy call back. Và sẽ nhận được dữ liệu chứa id
-
-// Admin
-router.on("/admin/products/add", () => render(AddProject, app));
-router.on("/admin/products/:id/edit", ({ data }) =>
-  render(() => EditProject(data), app)
-);
+//=======================  Admin Router =======================//
 
 router.resolve();
