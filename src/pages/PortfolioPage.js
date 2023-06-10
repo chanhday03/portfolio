@@ -1,4 +1,4 @@
-const PortfolioPage = (pathName) => {
+const PortfolioPage = () => {
   return /*html */ `
   <main> 
     <section class="container active" id="portfolio">

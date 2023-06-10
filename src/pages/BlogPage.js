@@ -1,4 +1,4 @@
-const BlogPage = (pathName) => {
+const BlogPage = () => {
   return /*html */ `
   <main> 
     <section class="container active" id="blogs">

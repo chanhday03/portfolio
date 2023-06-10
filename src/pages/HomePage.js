@@ -1,4 +1,4 @@
-const HomePage = (pathName) => {
+const HomePage = () => {
   return /*html */ `
   <header class="container header active" id="home">
   <div class="header-content">

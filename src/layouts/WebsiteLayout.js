@@ -4,7 +4,7 @@ import ThemeControls from "../components/ThemeControls";
 const WebsiteLayout = function (Page, pathName) {
   return /*html */ `
   <div id="website">
-    ${Page(pathName)}
+    ${Page()}
     ${Constrols(pathName)}
     ${ThemeControls()}
   </div>`;

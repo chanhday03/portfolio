@@ -1,4 +1,4 @@
-const ContactPage = (pathName) => {
+const ContactPage = () => {
   return /*html */ `
   <main> 
     <section class="container contact active" id="contact">

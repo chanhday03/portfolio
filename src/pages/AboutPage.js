@@ -1,4 +1,4 @@
-const AboutPage = (pathName) => {
+const AboutPage = () => {
   return /*html */ `
   <main> 
   <section class="container about active" id="about">
