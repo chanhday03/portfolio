@@ -9,6 +9,9 @@ import WebsiteLayout from "./layouts/WebsiteLayout";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import AdminLayout from "./layouts/AdminLayout";
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import ProductAddPage from "./pages/admin/ProductAddPage";
+import ProductEditPage from "./pages/admin/ProductEditPage";
 
 const app = document.querySelector("#app");
 
@@ -51,13 +54,13 @@ router.on("/contact", function () {
 
 //=======================  Admin Router =======================//
 router.on("/admin", function () {
-  render(() => AdminLayout(), app);
+  render(() => AdminLayout(AdminDashboard), app);
 });
 router.on("/admin/product/add", function () {
-  render(() => AdminLayout(), app);
+  render(() => AdminLayout(ProductAddPage), app);
 });
-router.on("/admin/product/:id/edit", ({ data }) =>
-  render(() => ProductEditPage(data), app)
-);
+router.on("/admin/product/:id/edit", function () {
+  render(() => AdminLayout(ProductEditPage), app);
+});
 
 router.resolve();
