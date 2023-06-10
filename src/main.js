@@ -8,12 +8,23 @@ import { render, router } from "./lib";
 import WebsiteLayout from "./layouts/WebsiteLayout";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import AdminLayout from "./layouts/AdminLayout";
 
 const app = document.querySelector("#app");
 
 // Trong thư viện Navigo đã xử lý hết phần router rồi.
 // Khi mà đường dẫn khớp với cái router mình viết ở dưới
 //Thì nó sẽ chạy call back. Và sẽ nhận được dữ liệu chứa id qua tham số của callback đó
+
+// private router
+router.on("/admin/*", () => {}, {
+  // before(next) {
+  //   const { user } = JSON.parse(localStorage.getItem("user")) || {};
+  //   if (!user) return (window.location.href = "/");
+  //   if (user && user.id != "1") return (window.location.href = "/signin");
+  //   next();
+  // },
+});
 
 //======================= Website  Router =======================//
 router.on("/signup", () => render(Signup, app));
@@ -39,15 +50,14 @@ router.on("/contact", function () {
 });
 
 //=======================  Admin Router =======================//
-
-// private router
-router.on("/admin/*", () => {}, {
-  before(next) {
-    const { user } = JSON.parse(localStorage.getItem("user")) || {};
-    if (!user) return (window.location.href = "/");
-    if (user && user.id != "1") return (window.location.href = "/signin");
-    next();
-  },
+router.on("/admin", function () {
+  render(() => AdminLayout(), app);
 });
+router.on("/admin/product/add", function () {
+  render(() => AdminLayout(), app);
+});
+router.on("/admin/product/:id/edit", ({ data }) =>
+  render(() => ProductEditPage(data), app)
+);
 
 router.resolve();
