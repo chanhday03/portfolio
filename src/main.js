@@ -32,35 +32,34 @@ router.on("/admin/*", () => {}, {
 //======================= Website  Router =======================//
 router.on("/signup", () => render(Signup, app));
 router.on("/signin", (param) => {
-  console.log(param);
   render(Signin, app);
 });
 
-router.on("/", function () {
-  render(() => WebsiteLayout(HomePage, "home"), app);
+router.on("/", function (params) {
+  render(() => WebsiteLayout(HomePage, params.url), app);
 });
-router.on("/about", function () {
-  render(() => WebsiteLayout(AboutPage, "about"), app);
+router.on("/about", function (params) {
+  render(() => WebsiteLayout(AboutPage, params.url), app);
 });
-router.on("/portfolio", function () {
-  render(() => WebsiteLayout(PortfolioPage, "portfolio"), app);
+router.on("/portfolio", function (params) {
+  render(() => WebsiteLayout(PortfolioPage, params.url), app);
 });
-router.on("/blogs", function () {
-  render(() => WebsiteLayout(BlogPage, "blogs"), app);
+router.on("/blogs", function (params) {
+  render(() => WebsiteLayout(BlogPage, params.url), app);
 });
-router.on("/contact", function () {
-  render(() => WebsiteLayout(ContactPage, "contact"), app);
+router.on("/contact", function (params) {
+  render(() => WebsiteLayout(ContactPage, params.url), app);
 });
 
 //=======================  Admin Router =======================//
-router.on("/admin", function () {
-  render(() => AdminLayout(AdminDashboard), app);
+router.on("/admin", function (params) {
+  render(() => AdminLayout(AdminDashboard, params.url), app);
 });
-router.on("/admin/product/add", function () {
-  render(() => AdminLayout(ProductAddPage), app);
+router.on("/admin/product/add", function (params) {
+  render(() => AdminLayout(ProductAddPage, params.url), app);
 });
-router.on("/admin/product/:id/edit", function () {
-  render(() => AdminLayout(ProductEditPage), app);
+router.on("/admin/product/:id/edit", function (params) {
+  render(() => AdminLayout(ProductEditPage, params.url), app);
 });
 
 router.resolve();

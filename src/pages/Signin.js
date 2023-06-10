@@ -22,7 +22,6 @@ const Signin = () => {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("data", data);
           localStorage.setItem("user", JSON.stringify(data));
           window.alert("Đăng nhập thành công");
           router.navigate("/admin");

@@ -1,16 +1,9 @@
 import { useEffect } from "../lib";
+import { handleSwitchAdminTheme } from "../utils";
 
 const AdminNavbar = () => {
   useEffect(() => {
-    const switchMode = document.getElementById("switch-mode");
-
-    switchMode.addEventListener("change", function () {
-      if (this.checked) {
-        document.body.classList.add("light-mode");
-      } else {
-        document.body.classList.remove("light-mode");
-      }
-    });
+    handleSwitchAdminTheme();
   }, []);
 
   return /*html */ `

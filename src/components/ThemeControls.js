@@ -1,11 +1,9 @@
 import { useEffect } from "../lib";
+import { handleSwitchWebsiteTheme } from "../utils";
 
 const ThemeControls = () => {
   useEffect(() => {
-    const buttonSwitchTheme = document.querySelector(".theme-btn");
-    buttonSwitchTheme.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
-    });
+    handleSwitchWebsiteTheme();
   });
   return /*html */ `
     <div class="theme-btn">

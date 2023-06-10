@@ -1,14 +1,17 @@
 import { useEffect } from "../lib";
+import { handleToggleAdminSidebar } from "../utils";
 
-const AdminSideBar = () => {
+const AdminSideBar = (pathName) => {
+  const checkIsAcive = function (href) {
+    if (pathName === href) {
+      return "active";
+    } else {
+      return "";
+    }
+  };
+
   useEffect(() => {
-    // TOGGLE SIDEBAR
-    const menuBar = document.querySelector("#content nav .bx.bx-menu");
-    const sidebar = document.getElementById("sidebar");
-
-    menuBar.addEventListener("click", function () {
-      sidebar.classList.toggle("hide");
-    });
+    handleToggleAdminSidebar();
   }, []);
 
   return /*html */ `
@@ -19,31 +22,31 @@ const AdminSideBar = () => {
           <span class="text">AdminHub</span>
       </a>
       <ul class="side-menu top">
-          <li class="active">
+          <li class="${checkIsAcive(pathName, "admin")}">
               <a href="admin/#">
                   <i class='bx bxs-dashboard' ></i>
                   <span class="text">Dashboard</span>
               </a>
           </li>
-          <li>
-              <a href="admin/#">
+          <li class="${checkIsAcive(pathName, "admin")}">
+              <a href="admin/project">
                   <i class='bx bxs-shopping-bag-alt' ></i>
-                  <span class="text">My Store</span>
+                  <span class="text">Projects</span>
               </a>
           </li>
-          <li>
-              <a href="admin/#">
+          <li class="${checkIsAcive(pathName, "admin")}">
+              <a href="admin/product">
                   <i class='bx bxs-doughnut-chart' ></i>
-                  <span class="text">Analytics</span>
+                  <span class="text">Products</span>
               </a>
           </li>
-          <li>
+          <li class="${checkIsAcive(pathName, "")}">
               <a href="admin/#">
                   <i class='bx bxs-message-dots' ></i>
-                  <span class="text">Message</span>
+                  <span class="text">Blogs</span>
               </a>
           </li>
-          <li>
+          <li class="${checkIsAcive(pathName, "")}">
               <a href="admin/#">
                   <i class='bx bxs-group' ></i>
                   <span class="text">Team</span>

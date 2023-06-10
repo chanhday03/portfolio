@@ -19,7 +19,6 @@ const Signup = () => {
         },
         body: JSON.stringify(credential),
       }).then((res) => {
-        console.log("res", res);
         if (res.ok) {
           window.alert("Bạn đăng ký thành công");
           setTimeout(() => {
