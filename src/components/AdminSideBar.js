@@ -23,31 +23,31 @@ const AdminSideBar = (pathName) => {
       </a>
       <ul class="side-menu top">
           <li class="${checkIsAcive(pathName, "admin")}">
-              <a href="admin/#">
+              <a href="/admin/#">
                   <i class='bx bxs-dashboard' ></i>
                   <span class="text">Dashboard</span>
               </a>
           </li>
           <li class="${checkIsAcive(pathName, "admin")}">
-              <a href="admin/project">
+              <a href="/admin/project">
                   <i class='bx bxs-shopping-bag-alt' ></i>
                   <span class="text">Projects</span>
               </a>
           </li>
           <li class="${checkIsAcive(pathName, "admin")}">
-              <a href="admin/product">
+              <a href="/admin/product">
                   <i class='bx bxs-doughnut-chart' ></i>
                   <span class="text">Products</span>
               </a>
           </li>
           <li class="${checkIsAcive(pathName, "")}">
-              <a href="admin/#">
+              <a href="/admin/#">
                   <i class='bx bxs-message-dots' ></i>
                   <span class="text">Blogs</span>
               </a>
           </li>
           <li class="${checkIsAcive(pathName, "")}">
-              <a href="admin/#">
+              <a href="/admin/#">
                   <i class='bx bxs-group' ></i>
                   <span class="text">Team</span>
               </a>
@@ -55,13 +55,13 @@ const AdminSideBar = (pathName) => {
       </ul>
       <ul class="side-menu">
           <li>
-              <a href="admin/#">
+              <a href="/admin/#">
                   <i class='bx bxs-cog' ></i>
                   <span class="text">Settings</span>
               </a>
           </li>
           <li>
-              <a href="admin/#" class="logout">
+              <a href="/admin/#" class="logout">
                   <i class='bx bxs-log-out-circle' ></i>
                   <span class="text">Logout</span>
               </a>

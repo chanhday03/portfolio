@@ -1210,12 +1210,11 @@ body {
   transition: 0.3s ease;
   min-height: 100vh;
 }
-#admin #wrap-content {
-  padding: 20px;
-}
+
 #admin #page-content {
   border-radius: 16px;
   overflow: auto;
+  padding: 40px;
 }
 #admin #sidebar.hide ~ #content {
   width: calc(100% - 60px);
@@ -1688,24 +1687,24 @@ body {
 }
 #form-wrap .formbold-form-input {
   width: 100%;
-  padding-bottom: 10px;
-  border: none;
-  border-bottom: 1px solid #dde3ec;
-  background: #fff;
   font-weight: 500;
   font-size: 16px;
   color: #07074d;
   outline: none;
   resize: none;
+  border: 1px solid var(--text-admin-color);
+  background: transparent;
+  padding: 12px;
+  border-radius: 8px;
 }
 #form-wrap .formbold-form-input::placeholder {
   color: #536387;
 }
 #form-wrap .formbold-form-input:focus {
-  border-color: #6a64f1;
+  border-color: var(--color-secondary);
 }
 #form-wrap .formbold-form-label {
-  color: var(--color-grey0);
+  color: var(--text-admin-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
@@ -1713,7 +1712,7 @@ body {
   margin-bottom: 18px;
 }
 #form-wrap .formbold-form-input:focus + .formbold-form-label {
-  color: #6a64f1;
+  color: var(--color-secondary);
 }
 #form-wrap .formbold-input-file {
   margin-top: 30px;
@@ -1753,7 +1752,7 @@ body {
   padding: 12px 25px;
   border: none;
   font-weight: 500;
-  background-color: #6a64f1;
+  background-color: var(--color-secondary);
   color: white;
   cursor: pointer;
   margin-top: 25px;
