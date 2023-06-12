@@ -12,6 +12,7 @@ import AdminLayout from "./layouts/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import ProductAddPage from "./pages/admin/ProductAddPage";
 import ProductEditPage from "./pages/admin/ProductEditPage";
+import ProductListPage from "./pages/admin/ProductListPage";
 
 const app = document.querySelector("#app");
 
@@ -54,6 +55,10 @@ router.on("/contact", function (params) {
 //=======================  Admin Router =======================//
 router.on("/admin", function (params) {
   render(() => AdminLayout(AdminDashboard, params.url), app);
+});
+//=======================  Admin Router =======================//
+router.on("/admin/product", function (params) {
+  render(() => AdminLayout(ProductListPage, params.url), app);
 });
 router.on("/admin/product/add", function (params) {
   render(() => AdminLayout(ProductAddPage, params.url), app);

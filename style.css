@@ -1140,11 +1140,11 @@ body {
   margin-top: 48px;
 }
 #admin #sidebar .side-menu li {
-  height: 48px;
+  height: 68px;
   background: transparent;
   margin-left: 6px;
   border-radius: 48px 0 0 48px;
-  padding: 4px;
+  padding: 6px;
 }
 #admin #sidebar .side-menu li.active {
   background: var(--bg-admin-color);
@@ -1208,6 +1208,14 @@ body {
   width: calc(100% - 280px);
   left: 280px;
   transition: 0.3s ease;
+  min-height: 100vh;
+}
+#admin #wrap-content {
+  padding: 20px;
+}
+#admin #page-content {
+  border-radius: 16px;
+  overflow: auto;
 }
 #admin #sidebar.hide ~ #content {
   width: calc(100% - 60px);
@@ -1578,4 +1586,178 @@ body {
   #admin #content main .table-data .todo .todo-list {
     min-width: 420px;
   }
+}
+
+/* ===================Table CSS ============// */
+#table-product {
+  width: 100%;
+  max-height: 100vh;
+}
+#table-product table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#table-product thead th {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-primary);
+  color: var(--color-grey-2);
+  font-size: 15px;
+  text-align: left;
+}
+#table-product th,
+#table-product td {
+  border-bottom: 1px solid var(--color-grey-2);
+  padding: 10px 20px;
+  font-size: 14px;
+}
+#table-product td img {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  border: 5px solid var(--color-grey-3);
+}
+#table-product tr:nth-child(even) {
+  background-color: var(--color-grey-3);
+}
+#table-product tr:nth-child(odd) {
+  background-color: var(--color-primary);
+}
+#table-product tr:hover td {
+  color: #44b478;
+  cursor: pointer;
+  background-color: var(--color-primary);
+}
+#table-product button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  color: var(--color-grey-3);
+  cursor: pointer;
+}
+#table-product button i {
+  font-size: 20px;
+}
+#table-product td .btn-edit {
+  background-color: var(--yellow);
+  color: var(--color-grey0);
+}
+#table-product td .btn-remove {
+  background-color: var(--red);
+  color: var(--color-grey0);
+}
+#table-product .btn-add {
+  background-color: var(--color-secondary);
+  color: var(--color-grey0);
+}
+
+#table-product ::-webkit-scrollbar {
+  width: 6px;
+}
+#table-product ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+#table-product ::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ===============+FORM CSS ======================== */
+
+/* #form-wrap .formbold-form-wrapper {
+  margin: 0 auto;
+  max-width: 550px;
+  width: 100%;
+  background: white;
+} */
+#form-wrap .formbold-input-flex {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+#form-wrap .formbold-input-flex > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+#form-wrap .formbold-textarea {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#form-wrap .formbold-form-input {
+  width: 100%;
+  padding-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #dde3ec;
+  background: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  color: #07074d;
+  outline: none;
+  resize: none;
+}
+#form-wrap .formbold-form-input::placeholder {
+  color: #536387;
+}
+#form-wrap .formbold-form-input:focus {
+  border-color: #6a64f1;
+}
+#form-wrap .formbold-form-label {
+  color: var(--color-grey0);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  margin-bottom: 18px;
+}
+#form-wrap .formbold-form-input:focus + .formbold-form-label {
+  color: #6a64f1;
+}
+#form-wrap .formbold-input-file {
+  margin-top: 30px;
+}
+#form-wrap .formbold-input-file input[type="file"] {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  z-index: -1;
+}
+#form-wrap .formbold-input-file .formbold-input-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+#form-wrap .formbold-filename-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 22px;
+}
+#form-wrap .formbold-filename {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 24px;
+  color: #536387;
+}
+#form-wrap .formbold-filename svg {
+  cursor: pointer;
+}
+#form-wrap .formbold-btn {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 12px 25px;
+  border: none;
+  font-weight: 500;
+  background-color: #6a64f1;
+  color: white;
+  cursor: pointer;
+  margin-top: 25px;
+}
+#form-wrap .formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
 }

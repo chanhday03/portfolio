@@ -5,5 +5,21 @@
       "password": "$2a$10$wKg8KQAZLNSWo1mrYxRf0ufgOMYSRzUk1MY/te4dWuWhAaJQzteR.",
       "id": 1
     }
+  ],
+  "products": [
+    {
+      "name": "Sản phẩm 1",
+      "price": "100",
+      "id": 1,
+      "img": "https://drive.google.com/uc?export=view&id=1qw3KUJnYgvnJHQP-yY13u_rXrJO8ZbL_",
+      "categoryId": 1
+    },
+    {
+      "name": "Sản phẩm 2",
+      "price": "200",
+      "id": 2,
+      "img": "https://drive.google.com/uc?export=view&id=1qw3KUJnYgvnJHQP-yY13u_rXrJO8ZbL_",
+      "categoryId": 1
+    }
   ]
 }

@@ -31,11 +31,14 @@ const AdminLayout = function (Page, pathName) {
         <!-- CONTENT -->
         <section id="content">
             ${AdminNavbar()}   
-
-            ${Page ? Page() : ""}
+            <div id="wrap-content">
+              <div id="page-content">
+                  ${Page ? Page() : ""}
+              </div>
+            </div>
         </section>
         <!-- CONTENT -->
-    </div>
+    
   `;
 };
 
