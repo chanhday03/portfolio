@@ -1,18 +1,21 @@
-import Navigo from "navigo"; // When using ES modules.
-import HomePage from "./pages/HomePage";
+import AdminLayout from "./layouts/AdminLayout";
+import WebsiteLayout from "./layouts/WebsiteLayout";
+import { render, router } from "./lib";
 import AboutPage from "./pages/AboutPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
 import PortfolioPage from "./pages/PortfolioPage";
-import { render, router } from "./lib";
-import WebsiteLayout from "./layouts/WebsiteLayout";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
-import AdminLayout from "./layouts/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
-import ProductAddPage from "./pages/admin/ProductAddPage";
-import ProductEditPage from "./pages/admin/ProductEditPage";
-import ProductListPage from "./pages/admin/ProductListPage";
+import CategoryAddPage from "./pages/admin/CategoryAddPage";
+import CategoryEditPage from "./pages/admin/CategoryEditPage";
+import CategoryListPage from "./pages/admin/CategoryListPage";
+import ProjectAddPage from "./pages/admin/ProjectAddPage";
+import ProjectEditPage from "./pages/admin/ProjectEditPage";
+import ProjectListPage from "./pages/admin/ProjectListPage";
 
 const app = document.querySelector("#app");
 
@@ -56,15 +59,55 @@ router.on("/contact", function (params) {
 router.on("/admin", function (params) {
   render(() => AdminLayout(AdminDashboard, params.url), app);
 });
-//=======================  Admin Router =======================//
-router.on("/admin/product", function (params) {
-  render(() => AdminLayout(ProductListPage, params.url), app);
+
+//======================= Admin Category Router =======================//
+router.on("/admin/category", function (params) {
+  render(() => AdminLayout(CategoryListPage, params.url), app);
 });
-router.on("/admin/product/add", function (params) {
-  render(() => AdminLayout(ProductAddPage, params.url), app);
+
+router.on("/admin/category/add", function (params) {
+  render(() => AdminLayout(CategoryAddPage, params.url), app);
 });
-router.on("/admin/product/:id/edit", function (params) {
-  render(() => AdminLayout(ProductEditPage, params.url), app);
+
+router.on("/admin/category/:id/edit", function (params) {
+  render(
+    () => AdminLayout(() => CategoryEditPage(params.data), params.url),
+    app
+  );
+});
+
+//======================= Admin Project Router =======================//
+
+router.on("/admin/project", function (params) {
+  render(() => AdminLayout(ProjectListPage, params.url), app);
+});
+router.on("/admin/project/add", function (params) {
+  render(() => AdminLayout(ProjectAddPage, params.url), app);
+});
+router.on("/admin/project/:id/edit", function (params) {
+  render(() => AdminLayout(ProjectEditPage, params.url), app);
+});
+
+router.notFound(() => {
+  render(() => NotFoundPage(), app);
+});
+
+//============Xử lý click vào thẻ a bị load lại trang ==============//
+document.addEventListener("click", (event) => {
+  // Kiểm tra xem phần tử được click có phải là thẻ <a> không
+  const anchorElement = event.target.closest("a");
+
+  // Kiểm tra xem có tồn tại thẻ <a> cha hay không
+  if (anchorElement) {
+    // Ngăn chặn hành vi mặc định của trình duyệt (load lại trang)
+    event.preventDefault();
+
+    // Lấy href của thẻ <a>
+    const href = anchorElement.getAttribute("href");
+
+    // Chuyển đổi route bằng Navigo.js
+    router.navigate(href);
+  }
 });
 
 router.resolve();

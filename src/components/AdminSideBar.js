@@ -2,7 +2,7 @@ import { useEffect } from "../lib";
 import { handleToggleAdminSidebar } from "../utils";
 
 const AdminSideBar = (pathName) => {
-  const checkIsAcive = function (href) {
+  const checkIsActive = function (href) {
     if (pathName === href) {
       return "active";
     } else {
@@ -22,34 +22,22 @@ const AdminSideBar = (pathName) => {
           <span class="text">Admin</span>
       </a>
       <ul class="side-menu top">
-          <li class="${checkIsAcive(pathName, "admin")}">
-              <a href="/admin/#">
-                  <i class='bx bxs-dashboard' ></i>
-                  <span class="text">Dashboard</span>
+          <li class="${checkIsActive("admin")}">
+              <a href="/admin/">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span class="text">Dashboard</span>
               </a>
           </li>
-          <li class="${checkIsAcive(pathName, "admin")}">
+          <li class="${checkIsActive("admin/category")}">
+              <a href="/admin/category">
+                    <i class='bx bx-category' ></i>
+                    <span class="text">Categories</span>
+              </a>
+          </li>
+          <li class="${checkIsActive("admin/project")}">
               <a href="/admin/project">
-                  <i class='bx bxs-shopping-bag-alt' ></i>
-                  <span class="text">Projects</span>
-              </a>
-          </li>
-          <li class="${checkIsAcive(pathName, "admin")}">
-              <a href="/admin/product">
-                  <i class='bx bxs-doughnut-chart' ></i>
-                  <span class="text">Products</span>
-              </a>
-          </li>
-          <li class="${checkIsAcive(pathName, "")}">
-              <a href="/admin/#">
-                  <i class='bx bxs-message-dots' ></i>
-                  <span class="text">Blogs</span>
-              </a>
-          </li>
-          <li class="${checkIsAcive(pathName, "")}">
-              <a href="/admin/#">
-                  <i class='bx bxs-group' ></i>
-                  <span class="text">Team</span>
+                    <i class='bx bxs-shopping-bag-alt' ></i>
+                    <span class="text">Projects</span>
               </a>
           </li>
       </ul>

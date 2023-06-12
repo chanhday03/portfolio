@@ -1689,7 +1689,7 @@ body {
   width: 100%;
   font-weight: 500;
   font-size: 16px;
-  color: #07074d;
+  color: var(--text-admin-color);
   outline: none;
   resize: none;
   border: 1px solid var(--text-admin-color);
@@ -1759,4 +1759,35 @@ body {
 }
 #form-wrap .formbold-btn:hover {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/*====================== 404 page =======================*/
+#not-found .page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Arvo", serif;
+}
+#not-found .page_404 img {
+  width: 100%;
+}
+#not-found .four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+#not-found .four_zero_four_bg h1 {
+  font-size: 80px;
+}
+#not-found .four_zero_four_bg h3 {
+  font-size: 80px;
+}
+#not-found .link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+}
+#not-found .contant_box_404 {
+  margin-top: -50px;
 }
