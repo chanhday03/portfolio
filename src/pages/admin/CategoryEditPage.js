@@ -2,13 +2,13 @@ import { getCategory, updateCategory } from "../../api/category";
 import { router, useEffect, useState } from "../../lib";
 
 const CategoryEditPage = ({ id }) => {
-  const [categoryName, setCategoryName] = useState("");
+  const [category, setCategory] = useState("");
 
   //B1 Lấy dữ liệu đổ vào form
   const fetchCategory = async () => {
     try {
       const response = await getCategory(id);
-      setCategoryName(response.name);
+      setCategory(response);
     } catch (error) {
       console.log(error);
     }
@@ -53,7 +53,7 @@ const CategoryEditPage = ({ id }) => {
                   id="category_name"
                   placeholder="Enter..."
                   class="formbold-form-input"
-                  value="${categoryName}"
+                  value="${category.name}"
                   />
                   <label for="category_name" class="formbold-form-label"> Category Name </label>
               </div>
