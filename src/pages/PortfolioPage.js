@@ -1,4 +1,23 @@
+import { getProjects } from "../api/project";
+import { useEffect, useState } from "../lib";
+
 const PortfolioPage = () => {
+  const [projects, setProjects] = useState([]); // 1
+
+  // Get List Project
+  const fetchListProject = async () => {
+    try {
+      const response = await getProjects();
+      setProjects(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // Get List Project
+  useEffect(() => {
+    fetchListProject();
+  }, []);
   return /*html */ `
   <main> 
     <section class="container active" id="portfolio">
@@ -9,12 +28,18 @@ const PortfolioPage = () => {
         Here is some of my work that I've done in various programming languages.
     </p>
     <div class="portfolios">
-        <div class="portfolio-item">
+        ${projects
+          .map((project) => {
+            return /*html */ `<div class="portfolio-item">
             <div class="image">
-                <img src="img/port1.jpg" alt="">
+                <img src="${project.img}" alt="">
             </div>
             <div class="hover-items">
-                <h3>Project Source</h3>
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <p>${project.time}</p>
+                <p>${project.skills}</p>
+                <p>${project.role}</p>
                 <div class="icons">
                     <a href="#" class="icon">
                         <i class="fab fa-github"></i>
@@ -27,121 +52,10 @@ const PortfolioPage = () => {
                     </a>
                 </div>
             </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="img/port2.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="img/port3.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="img/port4.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="img/port5.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="img/port2.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="image">
-                <img src="img/port7.jpg" alt="">
-            </div>
-            <div class="hover-items">
-                <h3>Project Source</h3>
-                <div class="icons">
-                    <a href="#" class="icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="#" class="icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+        </div>`;
+          })
+          .join("")}
+        
     </div>
 </section>
 </main>

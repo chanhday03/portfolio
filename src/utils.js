@@ -65,3 +65,15 @@ export const handleSearchForm = function () {
     }
   });
 };
+
+// export const handlePreviewImage = function () {
+//   const uploadInput = document.querySelector("#upload-image");
+//   const previewImg = document.querySelector(".upload-img img");
+
+//   uploadInput.addEventListener("change", (e) => {
+//     if (e.target.files.length > 0) {
+//       const url = URL.createObjectURL(e.target.files[0]);
+//       previewImg.src = url;
+//     }
+//   });
+// };

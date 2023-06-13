@@ -1729,23 +1729,7 @@ body {
   gap: 10px;
   position: relative;
 }
-#form-wrap .formbold-filename-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 22px;
-}
-#form-wrap .formbold-filename {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-  line-height: 24px;
-  color: #536387;
-}
-#form-wrap .formbold-filename svg {
-  cursor: pointer;
-}
+
 #form-wrap .formbold-btn {
   font-size: 16px;
   border-radius: 5px;
@@ -1759,6 +1743,57 @@ body {
 }
 #form-wrap .formbold-btn:hover {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+#form-wrap .formbold-btn:disabled {
+  background-color: var(--color-grey-3);
+}
+
+/* ====== */
+#form-wrap .upload-box {
+  position: relative;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border: 2px dashed #b9b9b9;
+}
+#form-wrap .uploading {
+  background-color: var(--color-grey-3);
+  opacity: 0.5;
+}
+
+#form-wrap .upload-img {
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#form-wrap .upload-img img {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 5px;
+  max-height: 500px;
+}
+#form-wrap #upload-input {
+  display: none;
+}
+#form-wrap .upload-label {
+  background-color: transparent;
+  opacity: 0.8;
+  text-transform: uppercase;
+  color: var(--text-admin-color);
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: table;
+  margin: 20px auto 0 auto;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+#form-wrap .upload-label:hover {
+  opacity: 1;
 }
 
 /*====================== 404 page =======================*/
@@ -1790,4 +1825,94 @@ body {
 }
 #not-found .contant_box_404 {
   margin-top: -50px;
+}
+
+/* ============= ICon loading========== */
+
+.lds-roller {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

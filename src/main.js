@@ -85,7 +85,10 @@ router.on("/admin/project/add", function (params) {
   render(() => AdminLayout(ProjectAddPage, params.url), app);
 });
 router.on("/admin/project/:id/edit", function (params) {
-  render(() => AdminLayout(ProjectEditPage, params.url), app);
+  render(
+    () => AdminLayout(() => ProjectEditPage(params.data), params.url),
+    app
+  );
 });
 
 router.notFound(() => {
