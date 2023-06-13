@@ -24,7 +24,8 @@ const Signin = () => {
         .then((data) => {
           localStorage.setItem("user", JSON.stringify(data));
           window.alert("Đăng nhập thành công");
-          router.navigate("/admin");
+
+          router.navigate("/");
         });
     });
   });

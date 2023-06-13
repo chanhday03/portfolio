@@ -4,6 +4,11 @@
       "email": "chanh@gmail.com",
       "password": "$2a$10$wKg8KQAZLNSWo1mrYxRf0ufgOMYSRzUk1MY/te4dWuWhAaJQzteR.",
       "id": 1
+    },
+    {
+      "email": "lethitrang@gmail.com",
+      "password": "$2a$10$P.dYp7HnZvdLmuRz.iH3oukVNa09fWYxkqq83Ohg.UIHc8yAUv0KG",
+      "id": 2
     }
   ],
   "categories": [

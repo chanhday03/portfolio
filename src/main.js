@@ -16,6 +16,7 @@ import CategoryListPage from "./pages/admin/CategoryListPage";
 import ProjectAddPage from "./pages/admin/ProjectAddPage";
 import ProjectEditPage from "./pages/admin/ProjectEditPage";
 import ProjectListPage from "./pages/admin/ProjectListPage";
+import { getUserInfo } from "./utils";
 
 const app = document.querySelector("#app");
 
@@ -25,12 +26,12 @@ const app = document.querySelector("#app");
 
 // private router
 router.on("/admin/*", () => {}, {
-  // before(next) {
-  //   const { user } = JSON.parse(localStorage.getItem("user")) || {};
-  //   if (!user) return (window.location.href = "/");
-  //   if (user && user.id != "1") return (window.location.href = "/signin");
-  //   next();
-  // },
+  before(next) {
+    const user = getUserInfo();
+    if (!user) return (window.location.href = "/");
+    if (user && user.id != "1") return (window.location.href = "/signin");
+    next();
+  },
 });
 
 //======================= Website  Router =======================//
