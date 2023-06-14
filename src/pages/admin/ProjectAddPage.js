@@ -2,9 +2,27 @@ import axios from "axios";
 import { router, useEffect, useState } from "../../lib";
 import Loading from "../../components/Loading";
 import { addProject } from "../../api/project";
+import { getCategories } from "../../api/category";
 
 const ProjectAddPage = () => {
   let urlImage = "";
+  const [categories, setCategories] = useState([]); // 1
+
+  //========= Lấy list category từ server và đổ vao select=======//
+  const fetchListCategory = async function () {
+    try {
+      const response = await getCategories();
+      setCategories(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  //=========== Lấy list category ===========//
+  useEffect(() => {
+    fetchListCategory();
+  }, []);
+
   useEffect(() => {
     const uploadInput = document.querySelector("#upload-image");
 
@@ -59,6 +77,8 @@ const ProjectAddPage = () => {
           description: document.querySelector("#description").value,
           role: document.querySelector("#title").value,
           img: urlImage,
+          categoryId: document.querySelector("#category").value,
+          repository: document.querySelector("#repository").value,
         };
 
         const response = await addProject(bodyData);
@@ -95,6 +115,28 @@ const ProjectAddPage = () => {
                   class="formbold-form-input"
                   />
                   <label for="time" class="formbold-form-label"> Project Time </label>
+              </div>
+            </div>
+            <div class="formbold-input-flex">
+              <div>
+                  <select id="category" name="category" class="select">
+                    ${categories.map((category) => {
+                      return /*html */ `
+                        <option value="${category.id}">${category.name}</option>
+                      `;
+                    })}
+                  </select>
+                  <label for="category" class="formbold-form-label"> Category </label>
+              </div>
+              <div>
+                  <input
+                  type="text"
+                  name="repository"
+                  id="repository"
+                  placeholder="Project repository..."
+                  class="formbold-form-input"
+                  />
+                  <label for="repository" class="formbold-form-label"> Repository </label>
               </div>
             </div>
 

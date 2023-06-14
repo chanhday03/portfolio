@@ -1941,3 +1941,22 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.select {
+  background-color: transparent;
+  color: var(--text-admin-color);
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  resize: none;
+  border: 1px solid var(--text-admin-color);
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+
+  /*for firefox*/
+  -moz-appearance: none;
+  /*for chrome*/
+  -webkit-appearance: none;
+  appearance: none;
+}
