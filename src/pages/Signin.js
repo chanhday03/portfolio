@@ -20,12 +20,21 @@ const Signin = () => {
         },
         body: JSON.stringify(credential),
       })
-        .then((response) => response.json())
+        .then((response) => {
+          if (response.ok) {
+            window.alert("Đăng nhập thành công");
+          } else {
+            window.alert("Đăng nhập that bai");
+          }
+          return response.json();
+        })
         .then((data) => {
-          localStorage.setItem("user", JSON.stringify(data));
-          window.alert("Đăng nhập thành công");
-
-          router.navigate("/");
+          if (typeof data === "string") {
+            window.alert(data);
+          } else {
+            localStorage.setItem("user", JSON.stringify(data));
+            router.navigate("/admin");
+          }
         });
     });
   });

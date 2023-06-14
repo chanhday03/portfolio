@@ -18,18 +18,26 @@ const Signup = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(credential),
-      }).then((res) => {
-        if (res.ok) {
-          window.alert("Bạn đăng ký thành công");
-          setTimeout(() => {
-            router.navigate("/signin", {
-              email: credential.email,
-            });
-          }, 1000);
-        } else {
-          window.alert("Không đăng ký được");
-        }
-      });
+      })
+        .then((response) => {
+          if (response.ok) {
+            window.alert("Bạn đăng ký thành công");
+          } else {
+            window.alert("Không đăng ký được");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          if (typeof data === "string") {
+            window.alert(data);
+          } else {
+            setTimeout(() => {
+              router.navigate("/signin", {
+                email: credential.email,
+              });
+            }, 1000);
+          }
+        });
     });
   });
   return /*html */ `

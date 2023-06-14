@@ -29,7 +29,10 @@ router.on("/admin/*", () => {}, {
   before(next) {
     const user = getUserInfo();
     if (!user) return (window.location.href = "/");
-    if (user && user.id != "1") return (window.location.href = "/signin");
+    if (user && user.id != "1") {
+      window.alert("Bạn không có quyền truy cập ADMIN");
+      return (window.location.href = "/signin");
+    }
     next();
   },
 });
