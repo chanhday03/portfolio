@@ -151,6 +151,7 @@ const ProjectEditPage = ({ id }) => {
                   id="repository"
                   placeholder="Project repository..."
                   class="formbold-form-input"
+                  value=${project.repository}
                   />
                   <label for="repository" class="formbold-form-label"> Repository </label>
               </div>

@@ -34,13 +34,13 @@
     },
     {
       "id": 3,
-      "title": "Test Updated",
+      "title": "Test",
       "time": "12/02/2023",
       "skills": "NodeEX",
-      "role": "Test Updated",
+      "role": "Test",
       "description": "hihihihiih",
       "img": "http://res.cloudinary.com/dwtno1ejh/image/upload/v1686676538/assignment/y6ovyvzd878iwd34wdhh.jpg",
-      "categoryId": "2",
+      "categoryId": "1",
       "repository": "Repository Test"
     }
   ]
