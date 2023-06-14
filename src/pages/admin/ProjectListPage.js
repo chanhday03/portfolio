@@ -47,11 +47,13 @@ const ProjectListPage = () => {
                 <tr>
                     <th>STT</th>
                     <th>Title</th>
+                    <th>Category</th>
                     <th>Description</th>
                     <th>Time</th>
                     <th>Skills</th>
                     <th>Image</th>
                     <th>Role</th>
+                    <th>Repository</th>
                     <th>
                         <a href="/admin/project/add">
                         <button class="btn-add">
@@ -69,11 +71,13 @@ const ProjectListPage = () => {
                     <tr>
                         <td>${index + 1}</td>
                         <td>${project.title}</td>
+                        <td>${project.categoryId}</td>
                         <td>${project.description}</td>
                         <td>${project.time}</td>
                         <td>${project.skills}</td>
                         <td><img width=20 src="${project.img}" /></td>
                         <td>${project.role}</td>
+                        <td>${project.repository}</td>
                         <td>
                             <button class="btn-edit">
                               <a href="/admin/project/${project.id}/edit">

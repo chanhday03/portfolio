@@ -28,16 +28,20 @@
       "skills": "Javascript",
       "role": "Assignment",
       "description": "HOHO",
-      "img": "http://res.cloudinary.com/dwtno1ejh/image/upload/v1686676034/assignment/ubhqkytdyql0ipubmj6t.jpg"
+      "img": "http://res.cloudinary.com/dwtno1ejh/image/upload/v1686676034/assignment/ubhqkytdyql0ipubmj6t.jpg",
+      "categoryId": "1",
+      "repository": "Repository Assignment"
     },
     {
       "id": 3,
-      "title": "Test",
+      "title": "Test Updated",
       "time": "12/02/2023",
-      "skills": "Node",
-      "role": "Test",
+      "skills": "NodeEX",
+      "role": "Test Updated",
       "description": "hihihihiih",
-      "img": "http://res.cloudinary.com/dwtno1ejh/image/upload/v1686676538/assignment/y6ovyvzd878iwd34wdhh.jpg"
+      "img": "http://res.cloudinary.com/dwtno1ejh/image/upload/v1686676538/assignment/y6ovyvzd878iwd34wdhh.jpg",
+      "categoryId": "2",
+      "repository": "Repository Test"
     }
   ]
 }

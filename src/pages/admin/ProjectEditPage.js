@@ -2,10 +2,22 @@ import axios from "axios";
 import { router, useEffect, useState } from "../../lib";
 import Loading from "../../components/Loading";
 import { addProject, getProject, updateProject } from "../../api/project";
+import { getCategories } from "../../api/category";
 
 const ProjectEditPage = ({ id }) => {
   let urlImage = "";
   const [project, setProject] = useState({});
+  const [categories, setCategories] = useState([]); // 1
+
+  //========= Lấy list category từ server và đổ vao select=======//
+  const fetchListCategory = async function () {
+    try {
+      const response = await getCategories();
+      setCategories(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   //B1 Lấy dữ liệu đổ vào form
   const fetchProject = async () => {
     try {
@@ -19,6 +31,7 @@ const ProjectEditPage = ({ id }) => {
   // Lấy dữ liệu
   useEffect(() => {
     fetchProject();
+    fetchListCategory();
   }, []);
 
   useEffect(() => {
@@ -76,6 +89,8 @@ const ProjectEditPage = ({ id }) => {
           description: document.querySelector("#description").value,
           role: document.querySelector("#title").value,
           img: urlImage || project?.img,
+          categoryId: document.querySelector("#category").value,
+          repository: document.querySelector("#repository").value,
         };
 
         const response = await updateProject(bodyData);
@@ -114,6 +129,30 @@ const ProjectEditPage = ({ id }) => {
                   value=${project.time}
                   />
                   <label for="time" class="formbold-form-label"> Project Time </label>
+              </div>
+            </div>
+            <div class="formbold-input-flex">
+              <div>
+                  <select id="category" name="category" class="select">
+                    ${categories.map((category) => {
+                      return /*html */ `
+                        <option ${
+                          project.categoryId === category.id ? "selected" : ""
+                        } value="${category.id}">${category.name}</option>
+                      `;
+                    })}
+                  </select>
+                  <label for="category" class="formbold-form-label"> Category </label>
+              </div>
+              <div>
+                  <input
+                  type="text"
+                  name="repository"
+                  id="repository"
+                  placeholder="Project repository..."
+                  class="formbold-form-input"
+                  />
+                  <label for="repository" class="formbold-form-label"> Repository </label>
               </div>
             </div>
 
